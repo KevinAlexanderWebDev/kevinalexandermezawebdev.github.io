@@ -64,8 +64,8 @@
   }
   
   .perfil {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     border: 3px solid var(--color-primary);
     object-fit: cover;
@@ -75,9 +75,18 @@
   .section {
     padding: 3rem 2rem;
     border-bottom: 2px solid var(--color-primary);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .section.in-view {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .section h2 {
+    text-align: left;
     margin-bottom: 1rem;
     color: var(--color-primary);
     font-size: 2rem;
@@ -89,35 +98,82 @@
     padding: 2rem;
   }
   
-  .form-contacto {
+ /* ---------------------------------- */
+/*  Formulario de contacto (general)  */
+/* ---------------------------------- */
+
+/* Contenedor del formulario */
+.form-contacto {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fafafa;       /* Claro por defecto */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Cada grupo de etiqueta + campo */
+  .form-group {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto 1rem auto;
+    margin-bottom: 1.25rem;
   }
   
-  .form-contacto input,
-  .form-contacto textarea {
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
+  /* Etiqueta */
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333333;                 /* Gris oscuro en light mode */
+    font-size: 0.95rem;
+  }
+  
+  /* Campos de texto y textarea */
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #cccccc;      /* Gris claro en light mode */
+    border-radius: 6px;
     font-size: 1rem;
+    color: #222222;                 /* Texto oscuro */
+    background-color: #ffffff;      /* Fondo blanco en light mode */
+    transition: border-color 0.3s, box-shadow 0.3s;
   }
   
-  .form-contacto button {
+  /* Placeholder ligeramente más tenue */
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #999999;
+  }
+  
+  /* Cuando el campo recibe foco */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #6c63ff;          /* Violeta (color principal) */
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+  }
+  
+  /* Botón de enviar (light mode) */
+  .enviar-btn {
+    display: block;
+    width: 100%;
     padding: 0.75rem;
-    background-color: var(--color-primary);
-    color: white;
+    margin-top: 0.5rem;
+    background-color: #6c63ff;      /* Violeta principal */
+    color: #ffffff;
+    font-weight: 600;
     border: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
   }
   
-  .form-contacto button:hover {
-    background-color: var(--color-accent);
+  .enviar-btn:hover,
+  .enviar-btn:focus {
+    background-color: #4f46e5;      /* Violeta más oscuro al hover */
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    outline: none;
   }
   
   /* Responsive */
@@ -153,15 +209,15 @@
         transform: translateY(0);
     }
 /* Estilo general para los detalles desplegables */
-details {
-    background-color: #1e1e2f;
-    border: 1px solid #3a3a5c;
-    border-radius: 12px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    color: #e0e0e0;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    details {
+        background-color: #1e1e2f;
+        border: 1px solid #3a3a5c;
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        color: #e0e0e0;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
     details[open] {
@@ -206,4 +262,262 @@ details {
         text-decoration: underline;
         color: #9ac1ff;
     }
+    /* --- Proyectos en tarjetas --- */
+    .proyectos {
+        background-color: #1f1f2f;
+        color: #fff;
+        padding: 3rem 1rem;
+        text-align: center;
+  }
+  
+  .cards-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: #2c2c3e;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .card-content h3 {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: #A6E1FA;
+  }
+  
+  .card-content p {
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  
+  .tecnologias {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: #aaa;
+  }
+  
+  .btn {
+    background-color: #4F46E5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #4338ca;
+  }
+
+  #modo-oscuro-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0rem;
+  }
+  
+  .icono-toggle {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+/* Modo oscuro mejorado: colores más contrastantes y llamativos */
+
+/* Fondo general y texto */
+body.dark-mode {
+    background-color: #000000; /* Negro puro para máximo contraste */
+    color: #FFFFFF; /* Blanco brillante */
+  }
+  
+  /* Barra de navegación */
+  body.dark-mode .navbar {
+    background-color: #111111; /* Casi negro, contraste con links */
+    border-bottom: 2px solid #BB86FC; /* Línea inferior violeta para destacar */
+  }
+  
+  body.dark-mode .navbar .logo {
+    color: #BB86FC; /* Logo en violeta claro */
+  }
+  
+  /* Enlaces de la navbar */
+  body.dark-mode .nav-links a {
+    color: #E0E0E0; /* Gris claro */
+  }
+  
+  body.dark-mode .nav-links a:hover {
+    color: #BB86FC; /* Al pasar el cursor, violeta brillante */
+  }
+  
+  /* Secciones (hero, section, footer) */
+  body.dark-mode .hero {
+    background-color: #0a0a0a; /* Muy oscuro */
+    color: #FFFFFF;
+  }
+  
+  body.dark-mode .section {
+    background-color: #121212; /* Oscuro, pero distinto al body */
+    color: #E0E0E0;
+    border-bottom: 2px solid #BB86FC; /* Línea violeta para separar secciones */
+  }
+  
+  body.dark-mode .footer {
+    background-color: #111111;
+    color: #E0E0E0;
+  }
+  
+  /* Encabezados h2 dentro de secciones */
+  body.dark-mode .section h2 {
+    color: #BB86FC; /* Títulos en violeta vivo */
+    border-bottom: 2px solid #BB86FC;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Enlaces generales */
+  body.dark-mode a {
+    color: #03DAC6; /* Verde-azulado para destacar dentro del texto */
+  }
+  
+  body.dark-mode a:hover {
+    color: #BB86FC; /* Violeta al pasar el cursor */
+  }
+  
+/* ---------------------------------- */
+/*      Estilos para MODO OSCURO      */
+/* ---------------------------------- */
+
+body.dark-mode .form-contacto {
+    background-color: #1e1e1e;      /* Gris muy oscuro */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  body.dark-mode .form-group label {
+    color: #e0e0e0;                 /* Gris claro en dark mode */
+  }
+  
+  body.dark-mode .form-group input,
+  body.dark-mode .form-group textarea {
+    background-color: #2c2c2c;      /* Gris oscuro para campos */
+    color: #f0f0f0;                 /* Blanco suave */
+    border: 1px solid #555555;      /* Gris medio */
+  }
+  
+  body.dark-mode .form-group input::placeholder,
+  body.dark-mode .form-group textarea::placeholder {
+    color: #888888;                 /* Placeholder gris medio */
+  }
+  
+  body.dark-mode .form-group input:focus,
+  body.dark-mode .form-group textarea:focus {
+    border-color: #bb86fc;          /* Violeta claro para foco en modo oscuro */
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.3);
+  }
+  
+  body.dark-mode .enviar-btn {
+    background-color: #bb86fc;      /* Violeta brillante en dark mode */
+    color: #000000;                 /* Texto negro para mejor contraste */
+    border: none;
+  }
+  
+  body.dark-mode .enviar-btn:hover,
+  body.dark-mode .enviar-btn:focus {
+    background-color: #3700b3;      /* Violeta oscuro */
+    box-shadow: 0 4px 12px rgba(55, 0, 179, 0.3);
+  }
+  
+  /* ---------------------------------- */
+  /*  Estilo de foco visible (para todos los campos y botones) */
+  /* ---------------------------------- */
+  input:focus,
+  textarea:focus,
+  .enviar-btn:focus {
+    outline: 3px dashed #bb86fc;
+    outline-offset: 4px;
+  }
+  
+  /* Tarjetas de proyectos */
+  body.dark-mode .card {
+    background-color: #1a1a1a; /* Gris muy oscuro */
+    border: 1px solid #333333; /* Borde gris para delimitar */
+    color: #FFFFFF;
+  }
+  
+  body.dark-mode .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(187, 134, 252, 0.4); /* Sombra violeta al pasar el cursor */
+  }
+  
+  /* Imagen dentro de la tarjeta: opcional borde */
+  body.dark-mode .card img {
+    border-bottom: 2px solid #BB86FC;
+  }
+  
+  /* Contenido de la tarjeta */
+  body.dark-mode .card-content h3 {
+    color: #03DAC6; /* Verde-azulado para títulos de tarjetas */
+  }
+  
+  body.dark-mode .card-content p {
+    color: #CCCCCC; /* Gris claro para texto */
+  }
+  
+  body.dark-mode .tecnologias {
+    color: #AAAAAA; /* Etiquetas en gris medio */
+  }
+  
+  /* Botón “Ver proyecto” dentro de tarjeta */
+  body.dark-mode .btn {
+    background-color: #03DAC6; /* Verde-azulado llamativo */
+    color: #000000; /* Texto negro para contraste */
+    border: 1px solid #03DAC6;
+    transition: background-color 0.3s ease;
+  }
+  
+  body.dark-mode .btn:hover {
+    background-color: #018786; /* Verde-azulado oscuro al hover */
+    color: #FFFFFF;
+  }
+  
+  /* Botón de modo oscuro (imagen PNG) */
+  /* Si quieres añadir un pequeño borde o sombra para destacarlo: */
+  body.dark-mode #modo-oscuro-toggle .icono-toggle {
+    filter: brightness(1.2); /* Aclara ligeramente el icono */
+  }
+  
+  /* Ajustes generales adicionales */
+  body.dark-mode input,
+  body.dark-mode textarea,
+  body.dark-mode select {
+    caret-color: #BB86FC; /* Cursor violeta en campos de texto */
+  }
+  
+  body.dark-mode ::placeholder {
+    color: #888888; /* Placeholder gris medio en modo oscuro */
+  }
+  
+  
+  
     

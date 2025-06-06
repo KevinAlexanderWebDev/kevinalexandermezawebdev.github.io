@@ -12,17 +12,22 @@
 <body>
 
   <header class="hero">
-    <nav class="navbar">
+    <nav class="navbar" role="navigation">
       <h1 class="logo">Kevin Alexander</h1>
       <ul class="nav-links">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+        <li><a href="#sobre-mi" title="sobre mí">Sobre mí</a></li>
+        <li><a href="#conocimientos" title="conocimientos">Conocimientos</a></li>
+        <li><a href="#proyectos" title="proyectos">Proyectos</a></li>
+        <li><a href="#contacto" title="contacto">Contacto</a></li>
+        <li>
+            <button id="modo-oscuro-toggle" aria-label="Cambiar tema" title="Modo oscuro">
+              <img src="modo-oscuro.png" alt="Cambiar modo de tema" class="icono-toggle" />
+            </button>
+          </li>
+      </ul>     
     </nav>
     <section class="hero-content">
-      <img src="Foto de CV Recortada.jpg" alt="Foto de Kevin Alexander" class="perfil" />
+      <img src="Foto de CV Recortada 1.jpg" alt="Foto de Kevin Alexander" class="perfil" />
       <h2>Desarrollador TIC | Web Developer</h2>
       <p>Apasionado por crear soluciones digitales modernas y funcionales.</p>
     </section>
@@ -30,7 +35,7 @@
 
   <main>
     <section class="section" id="presentacion">
-      <h2>Sobre mí</h2>
+      <h2 id="sobre-mi">Sobre mí</h2>
 
       <details open>
         <summary><strong>📌 Presentación</strong></summary>
@@ -38,7 +43,7 @@
       </details>
 
       <details>
-        <summary><strong>🛠️ Conocimientos</strong></summary>
+        <summary><strong id="conocimientos">🛠️ Conocimientos</strong></summary>
         <ul>
           <li>Desarrollo web</li>
           <li>Gestores de Contenido</li>
@@ -51,12 +56,7 @@
           <li>Metodologías Ágiles: Scrum</li>
         </ul>
       </details>
-
-      <details>
-        <summary><strong>🚀 Proyectos actuales</strong></summary>
-        <p>Tienda en línea para la empresa PYMETECH, Tampico, México → <a href="https://pymetech.commx/tienda" target="_blank">pymetech.commx/tienda</a></p>
-      </details>
-
+      
       <details>
         <summary><strong>💡 Actitudes y Aptitudes</strong></summary>
         <ul>
@@ -72,17 +72,74 @@
       </details>
     </section>
   </main>
-  
-  <footer id="contacto" class="footer">
-    <h2>Contacto</h2>
-    <form class="form-contacto">
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu correo" required />
-      <textarea placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
+
+    <section id="proyectos" class="section proyectos">
+        <h2>🚀 Proyectos recientes</h2>
+        <div class="cards-container">
+          
+        <article class="card" tabindex="0" role="link" aria-label="Ver página de Tienda PYMETECH">
+            <img src="Pymetech - Tienda profile image.jpg" alt="Captura tienda PYMETECH">
+            <div class="card-content">
+                <h3>Tienda PYMETECH</h3>
+                <p>Desarrollo de eCommerce para empresa tecnológica en Tampico, con diseño responsive, SEO y personalización en WordPress.</p>
+                <span class="tecnologias">WordPress · WooCommerce · CSS · UI/UX</span>
+                <a href="https://pymetech.com.mx/tienda" target="_blank" class="btn">Ver proyecto</a>
+            </div>
+        </article>
+      
+          <!-- Puedes duplicar este bloque para nuevos proyectos -->
+          <!--
+          <article class="card">
+            <img src="img/otro-proyecto.jpg" alt="Otro proyecto">
+            <div class="card-content">
+              <h3>Nombre del proyecto</h3>
+              <p>Breve descripción del proyecto destacando tu rol y habilidades aplicadas.</p>
+              <span class="tecnologias">HTML · CSS · JS</span>
+              <a href="#" class="btn">Ver proyecto</a>
+            </div>
+          </article>
+          -->
+      
+        </div>
+      </section>
+
+    <footer id="contacto" class="footer">
+    <h2 id="titulo-contacto">Contacto</h2><br>
+    <form class="form-contacto" novalidate>
+        <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input
+            id="nombre"
+            type="text"
+            placeholder="Tu nombre"
+            required
+            aria-required="true"
+        />
+        </div>
+        <div class="form-group">
+        <label for="correo">Correo electrónico</label>
+        <input
+            id="correo"
+            type="email"
+            placeholder="tu@correo.com"
+            required
+            aria-required="true"
+        />
+        </div>
+        <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea
+            id="mensaje"
+            placeholder="Escribe tu mensaje aquí..."
+            rows="4"
+            required
+            aria-required="true"
+        ></textarea>
+        </div>
+        <button type="submit" class="btn enviar-btn">Enviar</button>
     </form>
-    <p>&copy; 2025 Kevin Alexander Meza</p>
-  </footer>
+    <p>&copy; 2025 Kevin Alexander Meza Morales</p>
+    </footer>      
 
   <script src="script.js"></script>
 </body>
