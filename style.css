@@ -518,6 +518,87 @@ body.dark-mode .form-contacto {
     color: #888888; /* Placeholder gris medio en modo oscuro */
   }
   
+  /* ---------------------------------- */
+/* Transiciones suaves para cambios de modo */
+/* ---------------------------------- */
+
+/* Aplica transición a todos los cambios de color y fondo en estos elementos */
+body,
+.navbar,
+.hero,
+.section,
+.footer,
+.card,
+.form-contacto,
+.form-group input,
+.form-group textarea,
+.enviar-btn,
+a,
+.btn {
+  transition: 
+    background-color 0.5s ease-in-out,
+    color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out;
+}
+
+/* Transición específica para imágenes de iconos si cambian filtro */
+#modo-oscuro-toggle img {
+  transition: filter 0.5s ease-in-out;
+}
+/* ================================ */
+/*     Botón Scroll to Top         */
+/* ================================ */
+
+/* 1) Estilos generales */
+#scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1000;
+  }
+  
+  /* Imagen dentro del botón */
+  #scroll-to-top .scroll-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: filter 0.4s ease-in-out;
+  }
+  
+  /* 2) Mostrar/ocultar el botón */
+  #scroll-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* 3) Ajustes para modo oscuro: aplicar filtro a la imagen */
+  body.dark-mode #scroll-to-top .scroll-icon {
+    /* Puedes probar invert(), brightness(), saturate(), etc. */
+    filter: invert(1) brightness(1.2);
+  }
+  
+  /* 4) (Opcional) Hover/focus para mejor UX */
+  #scroll-to-top:hover .scroll-icon,
+  #scroll-to-top:focus .scroll-icon {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Asegúrate de que el foco sea visible */
+  #scroll-to-top:focus {
+    outline: 2px dashed #BB86FC;
+    outline-offset: 4px;
+  }
   
   
     

@@ -55,4 +55,31 @@ document.addEventListener('DOMContentLoaded', () => {
       secciones.forEach(sec => observer.observe(sec));
     }
   });
+  document.addEventListener('DOMContentLoaded', () => {
+    // —————— (aquí va tu código existente: toggle de modo oscuro, validaciones, IntersectionObserver, etc.) ——————
+  
+    // 1) LOGICA SCROLL-TO-TOP
+    const scrollBtn = document.getElementById('scroll-to-top');
+  
+    // Mostrar/ocultar según scroll
+    window.addEventListener('scroll', () => {
+      // Cuando el scroll vertical supere 300px, mostramos el botón
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+  
+    // Al hacer clic, hacer scroll suave al inicio
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  
+    // 2) Si deseas que el scroll infinito “resetee” al cambiar modo oscuro/claro,
+    //    podrías añadir aquí alguna lógica, pero no es obligatorio.
+  });
   
