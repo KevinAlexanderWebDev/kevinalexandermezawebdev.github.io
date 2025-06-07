@@ -124,7 +124,7 @@ const traducciones = {
     "proyectos.title": "🚀 Proyectos recientes",
     "proyectos.1": "Tienda PYMETECH",
     "proyectosspan.1": "Desarrollo de eCommerce para empresa tecnológica en Tampico, con diseño responsive, SEO y personalización en WordPress.",
-    "see.proyect": "Ver Proyecto", 
+    "see.project": "Ver Proyecto", 
     "contacto.title": "Contacto",
     "form.name": "Nombre",
     "form.email": "Correo electrónico",
