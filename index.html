@@ -15,67 +15,74 @@
     <nav class="navbar" role="navigation">
       <h1 class="logo">Kevin Alexander Meza Morales</h1>
       <ul class="nav-links">
-        <li><a href="#sobre-mi" title="sobre mí">Sobre mí</a></li>
-        <li><a href="#conocimientos" title="conocimientos">Conocimientos</a></li>
-        <li><a href="#proyectos" title="proyectos">Proyectos</a></li>
-        <li><a href="#contacto" title="contacto">Contacto</a></li>
+        <li><a href="#sobre-mi" title="sobre mí" data-i18n="nav.about">Sobre mí</a></li>
+        <li><a href="#conocimientos" title="conocimientos" data-i18n="nav.skills">Conocimientos</a></li>
+        <li><a href="#proyectos" title="proyectos" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#contacto" title="contacto" data-i18n="nav.contact">Contacto</a></li>
         <li>
             <button id="modo-oscuro-toggle" aria-label="Cambiar tema" title="Modo oscuro">
               <img src="modo-oscuro.png" alt="Cambiar modo de tema" class="icono-toggle" />
             </button>
-          </li>
+        </li>
+        <li>
+           <button id="lang-toggle" aria-label="Cambiar idioma" title="Cambiar idioma">
+            <img src="traductor (1).png" alt="Español" class="icono-idioma-icono-es" style="display: none;">
+            <img src="traductor.png" alt="English" class="icono-idioma-icono-en">
+           </button>
+        </li>
       </ul>     
     </nav>
     <section class="hero-content">
       <img src="Foto de CV Recortada 1.jpg" alt="Foto de Kevin Alexander" class="perfil" />
       <h2>Desarrollador TIC´s | Web Developer</h2>
-      <p>Apasionado por crear soluciones digitales modernas y funcionales.</p>
+      <p data-i18n="about.intro">Apasionado por crear soluciones digitales modernas y funcionales.</p>
     </section>
   </header>
 
   <main>
     <section class="section" id="presentacion">
-      <h2 id="sobre-mi">Sobre mí</h2>
+      <h2 id="sobre-mi" data-i18n="nav.about">Sobre mí</h2>
 
       <details open>
-        <summary><strong>📌 Presentación</strong></summary>
-        <p>Hola, soy Kevin Alexander Meza Morales, recién egresado de la Ingeniería en Tecnologías de la Información y Comunicaciones (TIC´s) del Instituto Tecnológico Superior de Naranjos.</p><br>
-        <p>Renacido cual ave Fénix tengo actualmente 22 años, aunque dicen que la edad es atemporal, me apasiona el desarrollo web, la investigación y la vida saludable. Ojo, no se confundan, no soy una rata de laboratorio, también me gusta hacer ejercicio, dibujar, tocar piano y cocinar, pero sobre todo aprender cosas nuevas.</p>
+        <summary><strong data-i18n="about.presentation">📌 Presentación</strong></summary>
+        <p data-i18n="about.text1">Hola, soy Kevin Alexander Meza Morales, recién egresado de la Ingeniería en Tecnologías de la Información y Comunicaciones (TIC´s) del Instituto Tecnológico Superior de Naranjos.</p><br>
+        <p data-i18n="about.text2">Renacido cual ave Fénix tengo actualmente 22 años, aunque dicen que la edad es atemporal, me apasiona el desarrollo web, la investigación y la vida saludable. Ojo, no se confundan, no soy una rata de laboratorio, también me gusta hacer ejercicio, dibujar, tocar piano y cocinar, pero sobre todo aprender cosas nuevas.</p>
       </details>
 
       <details>
-        <summary><strong id="conocimientos">🛠️ Conocimientos</strong></summary>
+        <summary><strong id="conocimientos" data-i18n="about.skills">🛠️ Conocimientos</strong></summary>
         <ul>
-          <li>Desarrollo web</li>
-          <li>Gestores de Contenido</li>
-          <li>Mantenimiento a sitios web</li>
-          <li>Diseño web responsivo</li>
-          <li>Prácticas SEO</li>
-          <li>Accesibilidad web</li>
-          <li>Diseño UI | UX</li>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Metodologías Ágiles: Scrum</li>
+          <li data-i18n="li.developer">Desarrollo web</li>
+          <li data-i18n="li.content">Gestores de Contenido</li>
+          <li data-i18n="li.sites web">Mantenimiento a sitios web</li>
+          <li data-i18n="li.design responsive">Diseño web responsivo</li>
+          <li data-i18n="li.seo">Prácticas SEO</li>
+          <li data-i18n="li.webaccesibility">Accesibilidad web</li>
+          <li data-i18n="li.UI UX design">Diseño UI | UX</li>
+          <li >HTML, CSS, JavaScript</li>
+          <li data-i18n="li.agils">Metodologías Ágiles: Scrum</li>
         </ul>
       </details>
       
       <details>
-        <summary><strong>💡 Actitudes y Aptitudes</strong></summary>
+        <summary><strong data-i18n="about.strong">💡 Actitudes y Aptitudes</strong></summary>
         <ul>
-          <li>Certificación como Entrenador Personal por la AFFEV</li>
-          <li>Conocimientos de Nutrición deportiva</li>
-          <li>Entrenamiento funcional</li>
-          <li>Suplementación deportiva</li>
-          <li>Trabajo en equipo</li>
-          <li>Trato frente a público</li>
-          <li>Seguridad de palabra</li>
+          <li data-i18n="li.strongen">Inglés Técnico</li>
+          <li data-i18n="li.strong1">Certificación como Entrenador Personal por la AFFEV</li>
+          <li data-i18n="li.strong2">Conocimientos de Nutrición deportiva</li>
+          <li data-i18n="li.strong3">Entrenamiento funcional</li>
+          <li data-i18n="li.strong4">Suplementación deportiva</li>
+          <li data-i18n="li.strong5">Trabajo en equipo</li>
+          <li data-i18n="li.strong6">Trato frente a público</li>
+          <li data-i18n="li.strong7">Seguridad de palabra</li>
         </ul>
-        <p>¡Tengo total iniciativa para aprender nuevas tecnologías web y mantenerme actualizado con el mercado y tendencias. Compruébalo! ;)</p>
+        <p data-i18n="p.learning">¡Tengo total iniciativa para aprender nuevas tecnologías web y mantenerme actualizado con el mercado y tendencias. Compruébalo! ;)</p>
       </details>
     </section>
   </main>
 
     <section id="proyectos" class="section">
-        <h2>🚀 Proyectos recientes</h2>
+        <h2 data-i18n="proyectos.title">🚀 Proyectos recientes</h2>
         <div class="cards-container">
           
        <article class="card" tabindex="0" role="link" aria-label="Ver página de Tienda PYMETECH">
@@ -90,10 +97,10 @@
         </div>
 
         <div class="card-content">
-          <h3>Tienda PYMETECH</h3>
-          <p>Desarrollo de eCommerce para empresa tecnológica en Tampico, con diseño responsive, SEO y personalización en WordPress.</p>
+          <h3 data-i18n="proyectos.1">Tienda PYMETECH</h3>
+          <p data-i18n="proyectosspan.1">Desarrollo de eCommerce para empresa tecnológica en Tampico, con diseño responsive, SEO y personalización en WordPress.</p>
           <span class="tecnologias">WordPress · WooCommerce · CSS · UI/UX · HTML · JS · PHP</span>
-          <a href="https://pymetech.com.mx/tienda" target="_blank" class="btn">Ver proyecto</a>
+          <a href="https://pymetech.com.mx/tienda" target="_blank" class="btn" data-i18n="see.proyect">Ver proyecto</a>
         </div>
        </article>
       
@@ -114,22 +121,22 @@
       </section>
 
     <footer id="contacto" class="footer">
-    <h2 id="titulo-contacto">Contacto</h2><br>
+    <h2 id="titulo-contacto" data-i18n="contacto.title">Contacto</h2><br>
     <form class="form-contacto" novalidate>
         <div class="form-group">
-        <label for="nombre">Nombre</label>
+        <label for="nombre" data-i18n="form.name">Nombre</label>
         <input
-            id="nombre"
+            id="nombre | name"
             type="text"
-            placeholder="Tu nombre"
+            placeholder="Tu nombre | Your name"
             required
             aria-required="true"
         />
         </div>
         <div class="form-group">
-        <label for="correo">Correo electrónico</label>
+        <label for="correo" data-i18n="form.email">Correo electrónico</label>
         <input
-            id="correo"
+            id="correo | email"
             type="email"
             placeholder="tu@correo.com"
             required
@@ -137,16 +144,16 @@
         />
         </div>
         <div class="form-group">
-        <label for="mensaje">Mensaje</label>
+        <label for="mensaje" data-i18n="form.message">Mensaje</label>
         <textarea
-            id="mensaje"
+            id="mensaje | message"
             placeholder="Escribe tu mensaje aquí..."
             rows="4"
             required
             aria-required="true"
         ></textarea>
         </div>
-        <button type="submit" class="btn enviar-btn">Enviar</button>
+        <button type="submit" class="btn enviar-btn" data-i18n="form.submit">Enviar</button>
     </form>
     <p>&copy; 2025 Kevin Alexander Meza Morales</p>
     </footer>      

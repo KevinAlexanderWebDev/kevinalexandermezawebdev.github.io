@@ -375,12 +375,32 @@
       cursor: pointer;
       padding: 0rem;
     }
+
+    #lang-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0rem;
+    }
     
     .icono-toggle {
       width: 32px;
       height: 32px;
       object-fit: contain;
     }
+    
+    .icono-idioma-icono-es{
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    
+    .icono-idioma-icono-en{
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
   /* Modo oscuro mejorado: colores más contrastantes y llamativos */
 
   /* Fondo general y texto */

@@ -89,3 +89,127 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+  // script.js
+const traducciones = {
+  es: {
+    "nombre": "Kevin Alexander Meza Morales",
+    "nav.about": "Sobre mí",
+    "nav.skills": "Conocimientos",
+    "nav.projects": "Proyectos",
+    "nav.contact": "Contacto",
+    "about.title": "Sobre mí",
+    "about.presentation": "📌 Presentación",
+    "about.intro": "Apasionado por crear soluciones digitales modernas y funcionales.",
+    "about.text1": "Hola, soy Kevin Alexander Meza Morales, recién egresado de la Ingeniería en Tecnologías de la Información y Comunicaciones (TIC´s) del Instituto Tecnológico Superior de Naranjos.",
+    "about.text2": "Renacido cual ave Fénix tengo actualmente 22 años, aunque dicen que la edad es atemporal, me apasiona el desarrollo web, la investigación y la vida saludable. Ojo, no se confundan, no soy una rata de laboratorio, también me gusta hacer ejercicio, dibujar, tocar piano y cocinar, pero sobre todo aprender cosas nuevas.",
+    "about.skills": "🛠️ Conocimientos",
+    "li.developer": "Desarrollo web", 
+    "li.content": "Gestores de contenido", 
+    "li.sites web": "Mantenimiento a sitios web", 
+    "li.design responsive": "Diseño web responsivo", 
+    "li.seo": "Prácticas SEO", 
+    "li.webaccesibility": "Accesibilidad web", 
+    "li.UI UX design": "Diseño UI | UX",
+    "li.agils": "Metodologías Ágiles: Scrum",
+    "about.strengths": "💡 Fortalezas y Habilidades",
+    "li.strongen": "Inglés Técnico" , 
+    "li.strong1": "Certificación como Entrenador Personal por la AFFEV",
+    "li.strong2": "Conocimientos de Nutrición deportiva", 
+    "li.strong3": "Entrenamiento funcional", 
+    "li.strong4": "Suplementación deportiva",
+    "li.strong5": "Trabajo en equipo", 
+    "li.strong6": "Trato frente a público",
+    "li.strong7": "Seguridad de palabra", 
+    "p.learning": "¡Tengo total iniciativa para aprender nuevas tecnologías web y mantenerme actualizado con el mercado y tendencias. Compruébalo! ;)",
+    "proyectos.title": "🚀 Proyectos recientes",
+    "proyectos.1": "Tienda PYMETECH",
+    "proyectosspan.1": "Desarrollo de eCommerce para empresa tecnológica en Tampico, con diseño responsive, SEO y personalización en WordPress.",
+    "see.proyect": "Ver Proyecto", 
+    "contacto.title": "Contacto",
+    "form.name": "Nombre",
+    "form.email": "Correo electrónico",
+    "form.message": "Mensaje",
+    "form.submit": "Enviar",
+    "footer.copy": "© 2025 Kevin Alexander Meza Morales"
+  },
+  en: {
+    "nombre": "Kevin Alexander Meza Morales",
+    "nav.about": "About Me",
+    "nav.skills": "Skills",
+    "nav.projects": "Projects",
+    "nav.contact": "Contact",
+    "about.title": "About Me",
+    "about.presentation": "📌 Presentation",
+    "about.intro": "Passionate about creating modern and functional digital solutions.",
+    "about.text1": "Hello, I am Kevin Alexander Meza Morales, recently graduated from the Engineering in Information and Communication Technologies (ICTs) of the Instituto Tecnológico Superior de Naranjos. ",
+    "about.text2": "Reborn as a Phoenix bird I am currently 22 years old, although they say age is timeless, I am passionate about web development, research and healthy living. Be careful, do not be confused, I am not a laboratory rat, I also like to exercise, draw, play piano and cook, but above all learn new things.",
+    "about.skills": "🛠️ Skills",
+    "li.developer": "Web development", 
+    "li.content": "Content managers", 
+    "li.sites web": "Website maintenance", 
+    "li.design responsive": "Responsive web design", 
+    "li.seo": "Web accessibility", 
+    "li.webaccesibility": "Seo Practices", 
+    "li.UI UX design": "UI Design | UX",
+    "li.agils": "Agile Methodologies: Scrum",
+    "about.strong": "💡 Strengths and Abilities",
+    "li.strongen": "Technical English", 
+    "li.strong1": "CCertification as Personal Trainer by AFFEV",
+    "li.strong2": "Knowledge of Sports Nutrition", 
+    "li.strong3": "Functional training", 
+    "li.strong4": "Sports supplementation",
+    "li.strong5": "Teamwork", 
+    "li.strong6": "I try in front of the public",
+    "li.strong7": "Word security", 
+    "p.learning": "I have full initiative to learn new web technologies and stay up-to-date with the market and trends. Check it out! ;)",
+    "proyectos.title": "🚀 Recent Projects",
+    "proyectos.1": "PYMETECH store",
+    "proyectosspan.1": "ECommerce development for technology company in Tampico, with responsive design, SEO and WordPress customization.",
+    "see.project": "See Project",
+    "contacto.title": "Contact",
+    "form.name": "Name",
+    "form.email": "Email",
+    "form.message": "Message",
+    "form.submit": "Send",
+    "footer.copy": "© 2025 Kevin Alexander Meza Morales"
+  }
+};
+
+  let idiomaActual = "es";
+
+  function cambiarIdioma() {
+    idiomaActual = idiomaActual === "es" ? "en" : "es";
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const clave = el.getAttribute("data-i18n");
+      el.textContent = traducciones[idiomaActual][clave] || clave;
+    });
+
+    // Alternar íconos
+    const iconoEs = document.querySelector(".icono-idioma-icono-es");
+    const iconoEn = document.querySelector(".icono-idioma-icono-en");
+
+    if (idiomaActual === "es") {
+      iconoEs.style.display = "none";
+      iconoEn.style.display = "inline";
+    } else {
+      iconoEs.style.display = "inline";
+      iconoEn.style.display = "none";
+    }
+  }
+
+  document.getElementById("lang-toggle").addEventListener("click", cambiarIdioma);
+
+  // Mostrar el ícono correcto al cargar la página
+  window.addEventListener("DOMContentLoaded", () => {
+    const iconoEs = document.querySelector(".icono-idioma-icono-es");
+    const iconoEn = document.querySelector(".icono-idioma-icono-en");
+
+    if (idiomaActual === "es") {
+      iconoEs.style.display = "none";
+      iconoEn.style.display = "inline";
+    } else {
+      iconoEs.style.display = "inline";
+      iconoEn.style.display = "none";
+    }
+  });
