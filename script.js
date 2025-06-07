@@ -68,4 +68,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-  
+  //Comportamiento de las cards en su versión móvil only//
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth <= 768) {
+      const sliders = document.querySelectorAll('.imagen-slider');
+
+      sliders.forEach(slider => {
+        const images = slider.querySelectorAll('.mobile-img');
+        if (images.length < 2) return;
+
+        let index = 0;
+        images.forEach(img => img.classList.remove('active'));
+        images[0].classList.add('active');
+
+        setInterval(() => {
+          images[index].classList.remove('active');
+          index = (index + 1) % images.length;
+          images[index].classList.add('active');
+        }, 3000); // cambia cada 3 segundos
+      });
+    }
+  });

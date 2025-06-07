@@ -301,7 +301,53 @@
       font-size: 0.95rem;
       color: #ccc;
     }
-    
+    .imagen-slider {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .imagen-slider img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease;
+      pointer-events: none;
+      border-radius: 12px;
+    }
+
+    .imagen-slider img.active {
+      opacity: 1;
+    }
+
+    /* En móviles se ocultan las imágenes de desktop y se muestran las mobile */
+    @media (max-width: 768px) {
+      .desktop-img {
+        display: none !important;
+      }
+      .mobile-img {
+        display: block;
+      }
+    }
+
+    /* En PC se ocultan las imágenes mobile */
+    @media (min-width: 769px) {
+      .mobile-img {
+        display: none !important;
+      }
+      .imagen-slider:hover .desktop-img {
+        opacity: 0;
+      }
+      .imagen-slider:hover .desktop-img:nth-child(2) {
+        opacity: 1;
+      }
+    }
+
     .tecnologias {
       display: block;
       font-size: 0.85rem;
