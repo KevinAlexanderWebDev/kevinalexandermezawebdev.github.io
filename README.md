@@ -22,7 +22,7 @@ El portafolio incluye una presentación sobre mí, una tabla de conocimientos, u
 Desarrollador web egresado de Ingeniería en Tecnologías de la Información y Comunicaciones. Apasionado por el diseño web moderno, el desarrollo responsivo y la experiencia de usuario.
 
 - [GitHub](https://github.com/KevinAlexanderWebDev)
-- [LinkedIn](https://www.linkedin.com/in/kevin-meza-ecommerce-dev/) *(opcional)*
+- [LinkedIn](https://www.linkedin.com/in/kevin-meza-ecommerce-dev/) 
 - Correo: alexander.kamm45@gmail.com 
 
 ---
