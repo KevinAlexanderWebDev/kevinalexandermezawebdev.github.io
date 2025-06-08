@@ -1,6 +1,8 @@
 # Portafolio Web - Kevin Alexander Meza Morales
 <p align="center">
-<img src="assets\screenshot portafolio .jpg" alt="Vista previa del portafolio" width="600" align-item="center"/>
+  <a href="https://kevinalexanderwebdev.github.io/kevinalexandermezawebdev.github.io/#proyectos" target="_blank">
+    <img src="assets\screenshot portafolio .jpg" alt="Vista previa del portafolio" width="600" align-item="center"/>
+  </a>
 </p>
 Este proyecto es un portafolio personal desarrollado como parte de mi identidad profesional como desarrollador web. Tiene como objetivo presentar mi perfil, habilidades técnicas, proyectos recientes y una forma de contacto clara y accesible. El diseño está pensado para ser **responsive**, accesible, moderno y optimizado para dispositivos móviles y de escritorio.
 Se encuentra anidado en la rama secundaria PruebasRamas1
