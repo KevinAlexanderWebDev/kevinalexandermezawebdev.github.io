@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mensaje = this.querySelector('textarea');
         if (!nombre.value.trim() || !correo.value.trim() || !mensaje.value.trim()) {
           e.preventDefault();
-          alert('Por favor, completa todos los campos antes de enviar.');
+          alert('Por favor, completa todos los campos antes de enviar. | Please complete all fields before sending.');
         }
       });
     }
