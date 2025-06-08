@@ -1,6 +1,7 @@
 # Portafolio Web - Kevin Alexander Meza Morales
-<img src="assets\screenshot portafolio .jpg" alt="Vista previa del portafolio" width="600"/>
-
+<p align="center">
+<img src="assets\screenshot portafolio .jpg" alt="Vista previa del portafolio" width="600" align-item="center"/>
+</p>
 Este proyecto es un portafolio personal desarrollado como parte de mi identidad profesional como desarrollador web. Tiene como objetivo presentar mi perfil, habilidades técnicas, proyectos recientes y una forma de contacto clara y accesible. El diseño está pensado para ser **responsive**, accesible, moderno y optimizado para dispositivos móviles y de escritorio.
 Se encuentra anidado en la rama secundaria PruebasRamas1
 
@@ -29,3 +30,9 @@ Desarrollador web egresado de Ingeniería en Tecnologías de la Información y C
 ---
 
 > Este proyecto representa una síntesis de mis conocimientos y es mi carta de presentación ante nuevas oportunidades profesionales.
+
+## 🚀 Cómo clonar y usar el proyecto
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/KevinAlexanderWebDev/kevinalexandermezawebdev.github.io/tree/PruebasRamas1
