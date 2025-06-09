@@ -356,18 +356,32 @@
     }
     
     .btn {
-      background-color: #4F46E5;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    
+        background-color: #4F46E5;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        border: none;
+        animation: pulse 2s infinite;
+        transition: transform 0.3s;
+  }
+
     .btn:hover {
-      background-color: #4338ca;
+    transform: scale(1.05);
+  }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.5);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+      }
     }
+
 
     #modo-oscuro-toggle {
       background: none;
@@ -492,16 +506,22 @@
       box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.3);
     }
     
-    body.dark-mode .enviar-btn {
-      background-color: #bb86fc;      /* Violeta brillante en dark mode */
-      color: #000000;                 /* Texto negro para mejor contraste */
-      border: none;
+    body.dark-mode .btn {
+      background-color: #03DAC6;
+      color: #000000;
+      animation: pulseDark 2s infinite;
     }
-    
-    body.dark-mode .enviar-btn:hover,
-    body.dark-mode .enviar-btn:focus {
-      background-color: #3700b3;      /* Violeta oscuro */
-      box-shadow: 0 4px 12px rgba(55, 0, 179, 0.3);
+
+    @keyframes pulseDark {
+      0% {
+        box-shadow: 0 0 0 0 rgba(3, 218, 198, 0.5);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(3, 218, 198, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(3, 218, 198, 0);
+      }
     }
     
     /* ---------------------------------- */
@@ -603,6 +623,107 @@
     transition: filter 0.5s ease-in-out;
   }
 
+  #open-form-btn{
+    animation: pulse1 2s infinite;
+    transition: transform 0.3s;
+  }
+
+  #open-for-btn:hover{
+    transform: scale(1.05);
+  }
+
+  @keyframes pulse1 {
+      0% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.5);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+      }
+    }
+  
+   #form-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--fondo-claro);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #form-container {
+    background-color: var(--form-bg);
+    color: var(--form-text);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    animation: fadeInUp 0.4s ease;
+  }
+
+  #form-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #form-container input,
+  #form-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #f0f0f0;
+    color: #333;
+  }
+   body.dark-mode #form-container input,
+  body.dark-mode #form-container textarea {
+    background: #1e1e1e;
+    color: #fff;
+  }
+
+  #form-container button {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+  }
+
+  #form-container button:hover {
+    opacity: 0.9;
+  }
+
+  #close-form {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
   /* ================================ */
   /*     Botón Scroll to Top         */
   /* ================================ */
@@ -610,7 +731,7 @@
   /* 1) Estilos generales */
   #scroll-to-top {
       position: fixed;
-      bottom: 2rem;
+      bottom: 6rem;
       right: 2rem;
       width: 48px;
       height: 48px;

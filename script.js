@@ -213,3 +213,33 @@ const traducciones = {
       iconoEn.style.display = "none";
     }
   });
+  const openBtn = document.getElementById("open-form-btn");
+    const overlay = document.getElementById("form-overlay");
+    const closeBtn = document.getElementById("close-form");
+
+    openBtn.addEventListener("click", () => {
+      overlay.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      overlay.style.display = "none";
+    });
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = "none";
+      }
+    });
+
+    document.getElementById("whatsapp-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nombre = document.getElementById("name").value;
+      const mensaje = document.getElementById("message").value;
+
+      const numero = "5211234567890"; // Cambia por tu número real
+      const texto = encodeURIComponent(`Hola, soy ${nombre}. ${mensaje}`);
+      const enlace = `https://api.whatsapp.com/send?phone=${numero}&text=${texto}`;
+
+      window.open(enlace, "_blank");
+      overlay.style.display = "none";
+    });

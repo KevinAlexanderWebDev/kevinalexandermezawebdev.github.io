@@ -159,6 +159,28 @@
     <button id="scroll-to-top" aria-label="Volver arriba">
      <img src="flecha-arriba.png" alt="Subir al inicio" class="scroll-icon" />
     </button>
+   <!-- Imagen PNG flotante -->
+    <img src="img/contacto.png" alt="Contacto WhatsApp" id="btn-contacto"
+        style="position: fixed; bottom: 20px; right: 30px; width: 43px; height: 43px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000;">
+
+    <!-- Contenedor flotante del formulario -->
+    <!-- Botón en forma de imagen -->
+    <img src="whatsapp.png" alt="Contáctame" id="open-form-btn" style="cursor: pointer; width: 54px; position: fixed; bottom: 20px; right: 30px; z-index: 1000;" />
+
+    <!-- Contenedor del formulario flotante -->
+    <div id="form-overlay" style="display: none;">
+      <div id="form-container">
+        <span id="close-form">&times;</span>
+        <h2>Contáctame por WhatsApp</h2>
+        <form id="whatsapp-form">
+          <input type="text" id="name" placeholder="Tu nombre" required>
+          <textarea id="message" placeholder="Escribe tu mensaje..." required></textarea>
+          <button type="submit" class="btn">Enviar a WhatsApp</button>
+        </form>
+      </div>
+    </div>
+
+
 
   <script src="script.js"></script>
 </body>
