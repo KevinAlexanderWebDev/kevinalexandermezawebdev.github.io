@@ -151,49 +151,55 @@
 
 
     <footer id="contacto" class="footer">
-    <h2 id="titulo-contacto" data-i18n="contacto.title">Contacto</h2><br>
-    <form action="https://formsubmit.co/mezamoraleskevinalexander@gmail.com" method="POST" class="form-contacto" novalidate>
-    <form class="form-contacto" novalidate>
+      <h2 id="titulo-contacto" data-i18n="contacto.title">Contacto</h2><br>
+
+      <form action="https://formsubmit.co/mezamoraleskevinalexander@gmail.com" method="POST" class="form-contacto" novalidate>
+        
         <div class="form-group">
-        <label for="nombre" data-i18n="form.name">Nombre</label>
-        <input
-            id="nombre | name"
+          <label for="nombre" data-i18n="form.name">Nombre</label>
+          <input
+            id="nombre"
             name="name"
             type="text"
             placeholder="Tu nombre | Your name"
             required
             aria-required="true"
-        />
+          />
         </div>
+
         <div class="form-group">
-        <label for="correo" data-i18n="form.email">Correo electrónico</label>
-        <input
-            id="correo | email"
+          <label for="correo" data-i18n="form.email">Correo electrónico</label>
+          <input
+            id="correo"
             name="email"
             type="email"
-            placeholder="tu@correo.com | your@emial.com"
+            placeholder="tu@correo.com | your@email.com"
             required
             aria-required="true"
-        />
+          />
         </div>
+
         <div class="form-group">
-        <label for="mensaje" data-i18n="form.message">Mensaje</label>
-        <textarea
-            id="mensaje | message"
+          <label for="mensaje" data-i18n="form.message">Mensaje</label>
+          <textarea
+            id="mensaje"
             name="message"
             placeholder="Escribe tu mensaje aquí... | Write your message here ..."
             rows="4"
             required
             aria-required="true"
-        ></textarea>
+          ></textarea>
         </div>
+
         <!-- Campos ocultos de configuración -->
-        <input type="hidden" name="_next" value="https://kevinalexanderwebdev.github.io/#contacto"> <!-- URL de agradecimiento -->
+        <input type="hidden" name="_next" value="https://kevinalexanderwebdev.github.io/#contacto">
         <input type="hidden" name="_captcha" value="false">
+
         <button type="submit" class="btn enviar-btn" data-i18n="form.submit">Enviar</button>
       </form>
-    <p>&copy; 2025 Kevin Alexander Meza Morales</p>
-    </footer>      
+
+      <p>&copy; 2025 Kevin Alexander Meza Morales</p>
+    </footer>
     <!-- Botón scroll to top -->
     <button id="scroll-to-top" aria-label="Volver arriba">
      <img src="flecha-arriba.png" alt="Subir al inicio" class="scroll-icon" />
