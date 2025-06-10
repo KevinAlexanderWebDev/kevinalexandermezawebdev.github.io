@@ -122,32 +122,22 @@
         <h2>📜 Cursos y Certificaciones</h2>
         <div class="cert-grid">
 
-        <!--Temporal -->
-          <div class="cert-placeholder">
-            <img src="certificado-de-garantia.png" alt="Certificados" />
-            <h2>📜 Cursos y Certificaciones</h2>
-            <p>¡Estamos trabajando en esta sección!</p>
-            <span class="soon-label">🚧 Próximamente 🚧</span>
-          </div>
-
-          <!--<div class="cert-card">
-            <img src="logo-curso1.png" alt="Logo Curso" />
-            <h3>Desarrollo Web Moderno</h3>
-            <p>Platzi · 2024</p>
-            <a href="URL_DEL_CERTIFICADO" target="_blank" class="cert-btn">Ver certificado</a>
-          </div>
-
           <div class="cert-card">
-            <img src="logo-curso2.png" alt="Logo Curso" />
-            <h3>Fundamentos de Git & GitHub</h3>
-            <p>FreeCodeCamp · 2023</p>
-            <a href="URL_DEL_CERTIFICADO" target="_blank" class="cert-btn">Ver certificado</a>
+            <img src="github.png" alt="Logo Curso" class="cerd-card-logo"/>
+            <h3>Curso a fondo de GitHub</h3>
+            <p>Código Facilito · 2025</p>
+            <!-- Miniatura del certificado -->
+            <img src="Certificado - Curso a fondo de GitHub_page-0001.jpg" alt="Certificado GitHub" class="cert-thumb" onclick="abrirModal(this)" />
           </div>
 
-         Agrega más tarjetas según necesites -->
-          
         </div>
       </section>
+
+      <!-- Modal flotante -->
+      <div id="modalCert" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="imgGrande">
+      </div>
 
 
     <footer id="contacto" class="footer">

@@ -243,3 +243,24 @@ const traducciones = {
       window.open(enlace, "_blank");
       overlay.style.display = "none";
     });
+
+      //Certificate seccion//
+      function abrirModal(img) {
+      const modal = document.getElementById("modalCert");
+      const modalImg = document.getElementById("imgGrande");
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    }
+
+    function cerrarModal() {
+      document.getElementById("modalCert").style.display = "none";
+    }
+
+    // Cierra si se hace clic fuera de la imagen
+    window.addEventListener("click", function (e) {
+      const modal = document.getElementById("modalCert");
+      const img = document.getElementById("imgGrande");
+      if (e.target === modal && e.target !== img) {
+        cerrarModal();
+      }
+    });
