@@ -843,7 +843,7 @@
     margin-left: 1.5rem;
   }
 
-  .cert-card h3, p{
+  .cert-card h3, .cert-card p{
     color: var(--text-color);
   }
 
