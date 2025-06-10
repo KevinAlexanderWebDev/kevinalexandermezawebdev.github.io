@@ -781,6 +781,7 @@
   
   .cert-grid {
   display: flex;
+  border-bottom: 2px solid var(--color-primary);  
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
@@ -836,6 +837,7 @@
   .cert-section h2{
     text-align: left;
     margin-bottom: 1rem;
+    margin-top: 2rem;
     color: var(--color-primary);
     font-size: 2rem;
     margin-left: 1.5rem;
@@ -872,6 +874,12 @@
     --card-bg: #1f1f2e;
     --text-color: #e0e0ff;
     --shadow: rgba(136, 0, 255, 0.4);
+  }
+
+  body.dark-mode .cert-section h2 {
+      color: #BB86FC; /* Títulos en violeta vivo */
+      border-bottom: 2px solid #BB86FC;
+      padding-bottom: 0.5rem;
   }
     
 
