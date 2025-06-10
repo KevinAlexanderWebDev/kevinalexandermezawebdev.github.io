@@ -236,7 +236,7 @@ const traducciones = {
       const nombre = document.getElementById("name").value;
       const mensaje = document.getElementById("message").value;
 
-      const numero = "5211234567890"; // Cambia por tu número real
+      const numero = "528332875807"; 
       const texto = encodeURIComponent(`Hola, soy ${nombre}. ${mensaje}`);
       const enlace = `https://api.whatsapp.com/send?phone=${numero}&text=${texto}`;
 
