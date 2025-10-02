@@ -1,19 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1) TOGGLE modo oscuro
   const toggle = document.getElementById("modo-oscuro-toggle");
   if (toggle) {
     const icono = toggle.querySelector("img");
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
       if (document.body.classList.contains("dark-mode")) {
-        icono.src = "modo-claro.png";
+        icono.src = "assets/modo-claro.png";
       } else {
-        icono.src = "modo-oscuro.png";
+        icono.src = "assets/modo-oscuro.png";
       }
     });
   }
 
-  // 2) Tarjetas clicables por teclado
   document.querySelectorAll('.card[role="link"]').forEach((card) => {
     card.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
