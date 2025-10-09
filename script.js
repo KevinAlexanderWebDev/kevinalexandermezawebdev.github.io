@@ -170,6 +170,7 @@ const traducciones = {
     "nav.ct3": "Diploma Terminación de Estudios",
     "nav.ct4": "Certificado Carta Pasante",
     "nav.ct5": "Carta de Recomendación | Pymetech",
+    "nav.ct6": "Curso desarrollo de software con IA | Big School",
     "contacto.title": "Contacto",
     "form.name": "Nombre",
     "form.email": "Correo electrónico",
@@ -251,6 +252,7 @@ const traducciones = {
     "nav.ct3": "Diploma of Completion of Studies",
     "nav.ct4": "Certificate of Internship Letter",
     "nav.ct5": "Letter of Recommendation | Pymetech",
+    "nav.ct6": " Course software developent with IA | Big School",
     "contacto.title": "Contact",
     "form.name": "Name",
     "form.email": "Email",
@@ -331,7 +333,6 @@ document
     overlay.style.display = "none";
   });
 
-//Certificate seccion//
 function abrirModal(img) {
   const modal = document.getElementById("modalCert");
   const modalImg = document.getElementById("imgGrande");
@@ -343,7 +344,6 @@ function cerrarModal() {
   document.getElementById("modalCert").style.display = "none";
 }
 
-// Cierra si se hace clic fuera de la imagen
 window.addEventListener("click", function (e) {
   const modal = document.getElementById("modalCert");
   const img = document.getElementById("imgGrande");
